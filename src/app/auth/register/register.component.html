@@ -1,0 +1,50 @@
+<section class="full-page">
+    <section class="context">
+        <div class="auth shadow">
+            <h2>Registrarse</h2>
+            <form>
+                <mat-form-field class="form-item" appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="text">
+                    <mat-icon matSuffix>mail</mat-icon>
+                </mat-form-field>
+                <mat-form-field class="form-item" appearance="fill">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput type="text">
+                    <mat-icon matSuffix>account_circle</mat-icon>
+                </mat-form-field>
+                <mat-form-field class="form-item" appearance="fill">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix type="button" (click)="hide = !hide"
+                        [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+                <div class="button-container">
+                    <button mat-raised-button color="primary" type="submit" >Login</button>
+                </div>
+                <div class="info-text">
+                    <b>
+                        ¿Ya tienes cuenta? <br>
+                        <a mat-button [routerLink]="['/login']" > Ingresar </a>
+                    </b>
+                </div>
+            </form>
+        </div>
+    </section>
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</section>

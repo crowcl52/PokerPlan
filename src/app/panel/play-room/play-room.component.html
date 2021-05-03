@@ -1,0 +1,27 @@
+<section class="main">
+    <div class="play-room">
+        <div class="card-container">
+            <div *ngIf="true" class="empty-card">
+            </div>
+            <div class="cardBox" *ngIf="false">
+                <div class="card">
+                    <div class="front">
+                    </div>
+                    <div class="back">
+                        <h3>13</h3>
+                    </div>
+                </div>
+            </div>
+            <p class="player" >Eduardo Sánchez</p>
+        </div>
+        
+    </div>
+
+    <ul class="card-chooser">
+        <li *ngFor="let card of cards;" [id]="'card'+card.name" >
+            <button class="card-select" >
+                <h3> {{card.name}} </h3>
+            </button>
+        </li>
+    </ul>
+</section>

@@ -1,0 +1,70 @@
+@import '../../variables.scss';
+
+.play-room{
+    height: 70vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.card-container{
+    width: 100px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.player{
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.card-chooser{
+    list-style: none;
+    margin: 0;
+    padding: 1.6rem;
+    width: 100%;
+    max-width: 100%;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    text-align: center;
+}
+
+li{
+    margin: 0 .8rem;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    transition: all .1s linear;
+}
+
+li.selected > button{
+    background: $dark;
+    color: white;
+    border: 3px solid $dark;
+    margin-top: -.25rem;
+}
+
+li:hover > button{
+    background-color: $dark;
+    color: white;
+    margin-top: -.25rem;
+}
+
+li.selected:hover > button{
+    background: $dark;
+    color: white;
+    border: 3px solid $dark;
+}
+
+@media  (max-width: 599px ) {
+    .card-chooser{
+        position: fixed;
+        bottom: 0;
+    }
+}
